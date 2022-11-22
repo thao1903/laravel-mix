@@ -1,32 +1,69 @@
-@font-face {
-  font-family: "OpenSans";
-  src: url(/fonts/open-sans-v29-vietnamese-regular.eot?fd912b4ae7285617e43a984c843afdd2?#iefix) format("embedded-opentype"), url(/fonts/open-sans-v29-vietnamese-regular.woff?05204f21770592e72eae888fbdc33ee1) format("woff"), url(/fonts/open-sans-v29-vietnamese-regular.ttf?967e51c14bb28bc2cb53fd96d7c61abb) format("truetype"), url(/fonts/open-sans-v29-vietnamese-regular.svg?a9aff17ee65c2d3dd7a9f91e32d0b49c#OpenSans) format("svg");
+@charset "UTF-8";
+html {
+  font-size: 10px;
 }
+
+body {
+  font-family: var(--font-primary);
+}
+
+input {
+  font-size: var(--fs-8) !important;
+}
+
+main,
+.modal-content {
+  font-size: var(--fs-8);
+}
+
+.box-product .add-to-cart:hover, .box-product .show-product:hover {
+  background-color: var(--color-1);
+  color: var(--color-10) !important;
+  border-color: var(--color-1) !important;
+}
+
 :root {
-  font-family: "OpenSans";
-  --color-1: #000000;
-  --color-2: #000000;
-  --color-3: #000000;
-  --color-4: #000000;
-  --color-5: #000000;
-  --color-6: #000000;
-  --color-7: #000000;
-  --color-8: #000000;
-  --color-9: #000000;
-  --color-10: #000000;
-  --color-11: #000000;
-  --color-12: #000000;
-  --color-13: #000000;
-  --color-14: #000000;
-  --fs-1: 6rem;
-  --fs-2: 5rem;
-  --fs-3: 4rem;
+  --color-1: #dd9825;
+  --color-2: ;
+  --color-3: #707070;
+  --color-4: ;
+  --color-5: #f5f5f5;
+  --color-6: #ededed;
+  --color-7: ;
+  --color-8: ;
+  --color-9: #000;
+  --color-10: #ffffff;
+  --color-11: ;
+  --color-12: ;
+  --color-13: ;
+  --color-14: #cb1515;
+  /*
+  - Color-1: Primary (CTA)
+  - Color-2: Tiêu đề
+  - Color-3: Mô tả
+  - Color-4: Nền 1
+  - Color-5: Nền 2
+  - Color-6: Nền 3
+  - Color-7: Yếu tố phụ (Đường line, bullet symbol, icon)
+  - Color-8: Tương tác (Hover, Clicked, Drag, Tap, Focus, Pressed...)
+  - Color-9: black
+  - Color-10: white
+  - Color-11: info
+  - Color-12: error
+  - Color-13: success
+  - Color-14: warning
+  Màu sắc (Sử dụng tối đa 14 màu, từ màu 10 - 14: Không thay đổi; các màu còn lại có thể áp dụng với các thành phần khác nhau theo phong cách thiết kế)
+  */
+  --font-primary: "OpenSans", sans-serif;
+  --fs-1: 4rem;
+  --fs-2: 3.8rem;
+  --fs-3: 3.2rem;
   --fs-4: 3rem;
-  --fs-5: 2rem;
-  --fs-6: 1rem;
-  --fs-7: 1rem;
-  --fs-8: 1rem;
-  --fs-9: 1rem;
+  --fs-5: 2.4rem;
+  --fs-6: 2rem;
+  --fs-7: 1.6rem;
+  --fs-8: 1.4rem;
+  --fs-9: 1.2rem;
   --rounded-1: 1px;
   --rounded-2: 2px;
   --rounded-3: 3px;
@@ -37,6 +74,7 @@
   --rounded-8: 8px;
   --rounded-9: 9px;
   --rounded-10: 10px;
+  --rounded-circle: 50%;
   --fw-1: 300;
   --fw-2: 400;
   --fw-3: 500;
@@ -46,31 +84,31 @@
 }
 
 .fs-1 {
-  font-size: var(--fs-1);
+  font-size: var(--fs-1) !important;
 }
 .fs-2 {
-  font-size: var(--fs-2);
+  font-size: var(--fs-2) !important;
 }
 .fs-3 {
-  font-size: var(--fs-3);
+  font-size: var(--fs-3) !important;
 }
 .fs-4 {
-  font-size: var(--fs-4);
+  font-size: var(--fs-4) !important;
 }
 .fs-5 {
-  font-size: var(--fs-5);
+  font-size: var(--fs-5) !important;
 }
 .fs-6 {
-  font-size: var(--fs-6);
+  font-size: var(--fs-6) !important;
 }
 .fs-7 {
-  font-size: var(--fs-7);
+  font-size: var(--fs-7) !important;
 }
 .fs-8 {
-  font-size: var(--fs-8);
+  font-size: var(--fs-8) !important;
 }
 .fs-9 {
-  font-size: var(--fs-9);
+  font-size: var(--fs-9) !important;
 }
 
 .fw-1 {
@@ -179,46 +217,34 @@
 }
 
 .border-color-1 {
-  border-color: var(--color-1);
+  border-color: var(--color-1) !important;
 }
 .border-color-2 {
-  border-color: var(--color-2);
+  border-color: var(--color-2) !important;
 }
 .border-color-3 {
-  border-color: var(--color-3);
+  border-color: var(--color-3) !important;
 }
 .border-color-4 {
-  border-color: var(--color-4);
+  border-color: var(--color-4) !important;
 }
 .border-color-5 {
-  border-color: var(--color-5);
+  border-color: var(--color-5) !important;
 }
 .border-color-6 {
-  border-color: var(--color-6);
+  border-color: var(--color-6) !important;
 }
 .border-color-7 {
-  border-color: var(--color-7);
+  border-color: var(--color-7) !important;
 }
 .border-color-8 {
-  border-color: var(--color-8);
+  border-color: var(--color-8) !important;
 }
 .border-color-9 {
-  border-color: var(--color-9);
+  border-color: var(--color-9) !important;
 }
 .border-color-10 {
-  border-color: var(--color-10);
-}
-.border-color-11 {
-  border-color: var(--color-11);
-}
-.border-color-12 {
-  border-color: var(--color-12);
-}
-.border-color-13 {
-  border-color: var(--color-13);
-}
-.border-color-14 {
-  border-color: var(--color-14);
+  border-color: var(--color-10) !important;
 }
 
 .rounded-1 {
@@ -252,6 +278,11 @@
   border-radius: var(--rounded-10);
 }
 
+h1.seo-title {
+  font-weight: var(--fw-4);
+  color: var(--color-2);
+  font-size: var(--fs-5);
+}
 h1.title {
   color: var(--color-1);
   font-size: var(--fs-1);
@@ -263,8 +294,8 @@ h2.title {
 }
 
 h3.title {
-  color: var(--color-1);
-  font-size: var(--fs-1);
+  color: var(--color-2);
+  font-size: var(--fs-4);
 }
 
 h4.title {
@@ -284,16 +315,429 @@ h6.title {
 
 .btn--color-1 {
   background-color: var(--color-1);
-  color: var(--color-2);
-  border-color: var(--color-1);
+  color: var(--color-10);
+  border-color: var(--color-1) !important;
 }
 .btn--color-1:hover {
   background-color: var(--color-1);
-  color: var(--color-2);
+  color: var(--color-10);
   border-color: var(--color-1);
 }
 .btn--color-1.active {
   background-color: var(--color-1);
-  color: var(--color-2);
+  color: var(--color-10);
   border-color: var(--color-1);
+}
+.btn--color-2 {
+  background-color: var(--color-5);
+  color: var(--color-2);
+  border-color: var(--color-2);
+}
+.btn--color-2:hover {
+  background-color: var(--color-5);
+  color: var(--color-2);
+  border-color: var(--color-2);
+}
+.btn--color-2.active {
+  background-color: var(--color-5);
+  color: var(--color-2);
+  border-color: var(--color-2);
+}
+.btn--color-6 {
+  background-color: var(--color-6);
+  color: var(--color-5);
+  border-color: var(--color-6);
+}
+.btn--color-6:hover {
+  background-color: var(--color-6) !important;
+  opacity: 0.8 !important;
+  color: var(--color-5) !important;
+  border-color: var(--color-6) !important;
+}
+.btn--color-6.active {
+  background-color: var(--color-5);
+  color: var(--color-2);
+  border-color: var(--color-6);
+}
+.btn-sm {
+  font-size: var(--fs-9) !important;
+  padding: 1.1rem 2rem !important;
+}
+.btn-lg {
+  padding: 1.1rem 2rem !important;
+}
+.btn-xl {
+  padding: 1.5rem 4rem !important;
+  font-size: var(--fs-7) !important;
+}
+.btn-img img {
+  width: 18px !important;
+  height: 8px !important;
+}
+.btn--transparent {
+  background-color: transparent !important;
+  color: var(--color-3) !important;
+}
+.btn--transparent:hover {
+  background-color: transparent !important;
+  color: var(--color-1) !important;
+  border-color: var(--color-1) !important;
+}
+.btn--transparent.active {
+  background-color: transparent !important;
+  color: var(--color-1) !important;
+  border-color: var(--color-1) !important;
+}
+.btn--transparent-white {
+  background-color: transparent !important;
+  border: 1px solid var(--color-5) !important;
+  color: var(--color-5) !important;
+}
+.btn--transparent-white.hover-bg-1:hover {
+  background-color: var(--color-1) !important;
+  color: var(--color-5) !important;
+  border-color: var(--color-1) !important;
+}
+.btn--transparent-white:hover {
+  background-color: transparent !important;
+  color: var(--color-5) !important;
+  border-color: var(--color-1) !important;
+}
+.btn--transparent-black {
+  background-color: transparent !important;
+  border: 1px solid var(--color-2) !important;
+  color: var(--color-2) !important;
+}
+.btn--transparent-black:hover {
+  background-color: transparent !important;
+  color: var(--color-1) !important;
+  border-color: var(--color-1) !important;
+}
+.btn--transparent-black.active {
+  background-color: transparent !important;
+  color: var(--color-1) !important;
+  border-color: var(--color-1) !important;
+}
+@media (max-width: 767.98px) {
+  .btn-xl {
+    font-size: var(--fs-8) !important;
+    padding: 1.5rem 2rem !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .btn-sm {
+    font-size: 1rem !important;
+    padding: 1rem !important;
+  }
+}
+img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url(/fonts/open-sans-v29-vietnamese-regular.eot?fd912b4ae7285617e43a984c843afdd2);
+  src: url(/fonts/open-sans-v29-vietnamese-regular.eot?fd912b4ae7285617e43a984c843afdd2?#iefix) format("embedded-opentype"), url(/fonts/open-sans-v29-vietnamese-regular.woff?05204f21770592e72eae888fbdc33ee1) format("woff"), url(/fonts/open-sans-v29-vietnamese-regular.ttf?967e51c14bb28bc2cb53fd96d7c61abb) format("truetype"), url(/fonts/open-sans-v29-vietnamese-regular.svg?6f59f9057aa3c94b2b2362e538381663#OpenSans) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(/fonts/open-sans-v29-vietnamese-500.eot?6c3d68df51be2c67e8c8f964b1d785bf);
+  src: url(/fonts/open-sans-v29-vietnamese-500.eot?6c3d68df51be2c67e8c8f964b1d785bf?#iefix) format("embedded-opentype"), url(/fonts/open-sans-v29-vietnamese-500.woff?bc39d10de0850b566e6dcc8e367a63c6) format("woff"), url(/fonts/open-sans-v29-vietnamese-500.ttf?7277e4453867aa5cf7f2b4ea0a1c33dd) format("truetype"), url(/fonts/open-sans-v29-vietnamese-500.svg?f26d0a18f985f3fb7a31409593e8574f#OpenSans) format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(/fonts/open-sans-v29-vietnamese-600.eot?e1fc9c5582a87c66e24b3f57c73b85a1);
+  src: url(/fonts/open-sans-v29-vietnamese-600.eot?e1fc9c5582a87c66e24b3f57c73b85a1?#iefix) format("embedded-opentype"), url(/fonts/open-sans-v29-vietnamese-600.woff?49d9ca3a3c514ca09d0d5ffb3a5e16fa) format("woff"), url(/fonts/open-sans-v29-vietnamese-600.ttf?8d0218c34a7c28dceeb894027b8db6d8) format("truetype"), url(/fonts/open-sans-v29-vietnamese-600.svg?f7afb5073a6d3aec49d7469772a55109#OpenSans) format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(/fonts/open-sans-v29-vietnamese-700.eot?4b44754abdc70e3156624419c4f56318);
+  src: url(/fonts/open-sans-v29-vietnamese-700.eot?4b44754abdc70e3156624419c4f56318?#iefix) format("embedded-opentype"), url(/fonts/open-sans-v29-vietnamese-700.woff?9e53ce4b6284f8b1ea6b6e789e68e185) format("woff"), url(/fonts/open-sans-v29-vietnamese-700.ttf?ea584972e7833f61cda0dd1ca40556f6) format("truetype"), url(/fonts/open-sans-v29-vietnamese-700.svg?0aa801c0686a30c33e8e57421f266f67#OpenSans) format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url(/fonts/open-sans-v29-vietnamese-italic.eot?04be79fb4ff9e47eef1be87a52444f89);
+  src: url(/fonts/open-sans-v29-vietnamese-italic.eot?04be79fb4ff9e47eef1be87a52444f89?#iefix) format("embedded-opentype"), url(/fonts/open-sans-v29-vietnamese-italic.woff?0d6a6090b6862e8921486be4965ebe7d) format("woff"), url(/fonts/open-sans-v29-vietnamese-italic.ttf?c15746f8505554a738a73de84e33779f) format("truetype"), url(/fonts/open-sans-v29-vietnamese-italic.svg?004366a0ece4880419577f55429e68d1#OpenSans) format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+a {
+  color: var(--color-9);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-1);
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.owl-dot:focus {
+  outline: none;
+}
+
+.owl-next:focus,
+.owl-prev:focus {
+  outline: none;
+}
+
+.owl-theme .owl-nav {
+  margin-top: 0;
+}
+
+.owl-carousel {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.subtitle {
+  font-size: var(--fs-7);
+  color: var(--color-3);
+}
+
+.label span {
+  margin-left: 2px;
+}
+
+.breadcrumb {
+  background: var(--color-5);
+  font-size: var(--fs-8);
+  padding: 1.5rem 0;
+}
+.breadcrumb .breadcrumb-list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.breadcrumb .breadcrumb-list .breadcrumb-item {
+  color: rgba(0, 0, 0, 0.451);
+}
+.breadcrumb .breadcrumb-list .breadcrumb-item a {
+  color: var(--color-3);
+}
+.breadcrumb .breadcrumb-list .breadcrumb-item a:hover {
+  color: var(--color-2);
+}
+.breadcrumb .breadcrumb-list .breadcrumb-item.active {
+  color: var(--color-2);
+}
+.breadcrumb .breadcrumb-list .breadcrumb-item + .breadcrumb-item {
+  padding-left: 0.8rem;
+}
+.breadcrumb .breadcrumb-list .breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 0.8rem;
+}
+@keyframes stuckMoveDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.owl-carousel .owl-nav button.owl-prev {
+  background: transparent;
+  border: 0;
+  left: 0;
+  transition: all 0.5s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-nav button.owl-prev:hover {
+  background-color: transparent;
+  color: #333;
+}
+.owl-carousel .owl-nav button.owl-prev i {
+  background: #fafafa;
+  border: none !important;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-circle);
+}
+.owl-carousel .owl-nav button.owl-next {
+  background: transparent;
+  border: 0;
+  right: 0;
+  transition: all 0.5s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.owl-carousel .owl-nav button.owl-next:hover {
+  background-color: transparent;
+  color: #333;
+}
+.owl-carousel .owl-nav button.owl-next i {
+  background: #fafafa;
+  border: none !important;
+  width: 3rem;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rounded-circle);
+}
+.owl-carousel .owl-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 1.2rem;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.owl-carousel .owl-dots .owl-dot.active span {
+  width: 14px !important;
+  height: 14px !important;
+  background: var(--color-5) !important;
+}
+.owl-carousel .owl-dots .owl-dot span {
+  width: 9px !important;
+  height: 9px !important;
+  margin: 0px 2.5px !important;
+  border: 1px solid var(--color-5) !important;
+  background: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.box-product__image:hover + .box-product-tooltip {
+  top: 0;
+}
+
+.box-product-color__item {
+  width: 1.6rem;
+  height: 1.6rem;
+  cursor: pointer;
+}
+.box-product-color__item.is-select {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.box-product-color__item.is-select::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: var(--rounded-circle);
+  border: 3px solid var(--color-5);
+}
+
+.box-product-color__item--black {
+  background-color: #000;
+}
+
+.box-product-color__item--brown {
+  background-color: #6c533d;
+}
+
+.box-product-color__item--blue {
+  background-color: #89d2b3;
+}
+
+.box-product-color__item--red {
+  background-color: #cb1515;
+}
+
+.box-product-color__item--white {
+  background-color: #fff;
+}
+
+.box-product-color__item--yellow {
+  background-color: #cf9114;
+}
+
+.box-product-color__item--green {
+  background-color: #006e5b;
+}
+
+.box-product-color__item--skin {
+  background-color: #e3c5a5;
+}
+
+.box-product-color__item--gray {
+  background-color: #a4a09d;
+}
+
+.box-product-color__item--reddish {
+  background-color: #9e635e;
+}
+
+.box-product-tooltip {
+  top: 100%;
+  z-index: 3;
+  transition: all 0.4s ease;
+  border-radius: 1rem;
+}
+
+.box-product-tooltip.toggle {
+  top: 0;
+}
+
+.box-product {
+  transition: all 0.3s;
+}
+.box-product:hover .box-product-tooltip {
+  transition: all 0.3s;
+}
+.box-product .table.product-atrribute tr,
+.box-product .table.product-atrribute td {
+  padding: 0.2rem 0.2rem;
+  border: 0;
+}
+
+.box-product.hover-shadow:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.box-product:hover .box-product__image--hover {
+  display: flex !important;
+  transform: 0.4s;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-tabs-product {
+  border: none;
+}
+.nav-tabs-product .nav-item .nav-link {
+  border: none;
+}
+.nav-tabs-product .nav-item .nav-link.active {
+  border-bottom: 2px solid var(--color-1);
+  color: var(--color-1);
+}
+
+.start-25 {
+  left: 25%;
+}
+.start-75 {
+  left: 75%;
+}
+
+.w-45 {
+  width: 45%;
+}
+.w-65 {
+  width: 65%;
 }

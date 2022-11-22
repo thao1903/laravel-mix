@@ -1,30 +1,55 @@
-@font-face {
-    font-family: "OpenSans";
-    src: url("../fonts/open-sans-v29-vietnamese-regular.eot?#iefix")
-            format("embedded-opentype"),
-        url("../fonts/open-sans-v29-vietnamese-regular.woff") format("woff"),
-        url("../fonts/open-sans-v29-vietnamese-regular.ttf") format("truetype"),
-        url("../fonts/open-sans-v29-vietnamese-regular.svg#OpenSans")
-            format("svg");
+@import "./node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+html {
+    font-size: 10px;
 }
-
+body {
+    font-family: var(--font-primary);
+}
+input {
+    font-size: var(--fs-8) !important;
+}
+main,
+.modal-content {
+    font-size: var(--fs-8);
+}
+.box-product{
+    .add-to-cart, .show-product{
+        &:hover{
+            background-color: var(--color-1);
+            color: var(--color-10)!important;
+            border-color: var(--color-1) !important;
+        }
+    }
+}
 :root {
-    font-family: "OpenSans";
-
-    --color-1: #000000;
-    --color-2: #000000;
-    --color-3: #000000;
-    --color-4: #000000;
-    --color-5: #000000;
-    --color-6: #000000;
-    --color-7: #000000;
-    --color-8: #000000;
-    --color-9: #000000;
-    --color-10: #000000;
-    --color-11: #000000;
-    --color-12: #000000;
-    --color-13: #000000;
-    --color-14: #000000;
+    --color-1: #dd9825;
+    --color-2: ;
+    --color-3: #707070;
+    --color-4: ;
+    --color-5: #f5f5f5;
+    --color-6: #ededed;
+    --color-7: ;
+    --color-8: ;
+    --color-9: #000;
+    --color-10: #ffffff;
+    --color-11: ;
+    --color-12: ;
+    --color-13: ;
+    --color-14: #cb1515;
     /*
     - Color-1: Primary (CTA)
     - Color-2: Tiêu đề
@@ -42,17 +67,18 @@
     - Color-14: warning
     Màu sắc (Sử dụng tối đa 14 màu, từ màu 10 - 14: Không thay đổi; các màu còn lại có thể áp dụng với các thành phần khác nhau theo phong cách thiết kế)
     */
-    // Font-size Từ lớn đến bé, fs1 là lớn nhất
-    --fs-1: 6rem;
-    --fs-2: 5rem;
-    --fs-3: 4rem;
-    --fs-4: 3rem;
-    --fs-5: 2rem;
-    --fs-6: 1rem;
-    --fs-7: 1rem;
-    --fs-8: 1rem;
-    --fs-9: 1rem;
+    --font-primary: "OpenSans", sans-serif;
 
+    // Font-size Từ lớn đến bé, fs1 là lớn nhất
+    --fs-1: 4rem;
+    --fs-2: 3.8rem;
+    --fs-3: 3.2rem;
+    --fs-4: 3rem;
+    --fs-5: 2.4rem;
+    --fs-6: 2rem;
+    --fs-7: 1.6rem;
+    --fs-8: 1.4rem;
+    --fs-9: 1.2rem;
     --rounded-1: 1px;
     --rounded-2: 2px;
     --rounded-3: 3px;
@@ -63,7 +89,7 @@
     --rounded-8: 8px;
     --rounded-9: 9px;
     --rounded-10: 10px;
-
+    --rounded-circle: 50%;
     --fw-1: 300;
     --fw-2: 400;
     --fw-3: 500;
@@ -74,31 +100,31 @@
 
 .fs {
     &-1 {
-        font-size: var(--fs-1);
+        font-size: var(--fs-1) !important;
     }
     &-2 {
-        font-size: var(--fs-2);
+        font-size: var(--fs-2) !important;
     }
     &-3 {
-        font-size: var(--fs-3);
+        font-size: var(--fs-3) !important;
     }
     &-4 {
-        font-size: var(--fs-4);
+        font-size: var(--fs-4) !important;
     }
     &-5 {
-        font-size: var(--fs-5);
+        font-size: var(--fs-5) !important;
     }
     &-6 {
-        font-size: var(--fs-6);
+        font-size: var(--fs-6) !important;
     }
     &-7 {
-        font-size: var(--fs-7);
+        font-size: var(--fs-7) !important;
     }
     &-8 {
-        font-size: var(--fs-8);
+        font-size: var(--fs-8) !important;
     }
     &-9 {
-        font-size: var(--fs-9);
+        font-size: var(--fs-9) !important;
     }
 }
 
@@ -215,46 +241,34 @@
 
 .border-color {
     &-1 {
-        border-color: var(--color-1);
+        border-color: var(--color-1) !important;
     }
     &-2 {
-        border-color: var(--color-2);
+        border-color: var(--color-2) !important;
     }
     &-3 {
-        border-color: var(--color-3);
+        border-color: var(--color-3) !important;
     }
     &-4 {
-        border-color: var(--color-4);
+        border-color: var(--color-4) !important;
     }
     &-5 {
-        border-color: var(--color-5);
+        border-color: var(--color-5) !important;
     }
     &-6 {
-        border-color: var(--color-6);
+        border-color: var(--color-6) !important;
     }
     &-7 {
-        border-color: var(--color-7);
+        border-color: var(--color-7) !important;
     }
     &-8 {
-        border-color: var(--color-8);
+        border-color: var(--color-8) !important;
     }
     &-9 {
-        border-color: var(--color-9);
+        border-color: var(--color-9) !important;
     }
     &-10 {
-        border-color: var(--color-10);
-    }
-    &-11 {
-        border-color: var(--color-11);
-    }
-    &-12 {
-        border-color: var(--color-12);
-    }
-    &-13 {
-        border-color: var(--color-13);
-    }
-    &-14 {
-        border-color: var(--color-14);
+        border-color: var(--color-10) !important;
     }
 }
 
@@ -290,85 +304,13 @@
         border-radius: var(--rounded-10);
     }
 }
-.spacing-x {
-    &-1 {
-        padding: 0.5rem 0;
-    }
-    &-2 {
-        padding: 1rem 0;
-    }
-    &-3 {
-        padding: 1.5rem 0;
-    }
-    &-4 {
-        padding: 2rem 0;
-    }
-    &-5 {
-        padding: 3rem 0;
-    }
-    &-6 {
-        padding: 4rem 0;
-    }
-    &-7 {
-        padding: 5rem 0;
-    }
-    &-8 {
-        padding: 8rem 0;
-    }
-}
-.spacing-y {
-    &-1 {
-        padding: 0 0.5rem;
-    }
-    &-2 {
-        padding: 0 1rem;
-    }
-    &-3 {
-        padding: 0 1.5rem;
-    }
-    &-4 {
-        padding: 0 2rem;
-    }
-    &-5 {
-        padding: 0 3rem;
-    }
-    &-6 {
-        padding: 0 4rem;
-    }
-    &-7 {
-        padding: 0 5rem;
-    }
-    &-8 {
-        padding: 0 8rem;
-    }
-}
-.spacing-xy {
-    &-1 {
-        padding: 0.5rem;
-    }
-    &-2 {
-        padding: 1rem;
-    }
-    &-3 {
-        padding: 1.5rem;
-    }
-    &-4 {
-        padding: 2rem;
-    }
-    &-5 {
-        padding: 3rem;
-    }
-    &-6 {
-        padding: 4rem;
-    }
-    &-7 {
-        padding: 5rem;
-    }
-    &-8 {
-        padding: 8rem;
-    }
-}
+
 h1 {
+    &.seo-title {
+        font-weight: var(--fw-4);
+        color: var(--color-2);
+        font-size: var(--fs-5);
+    }
     &.title {
         color: var(--color-1);
         font-size: var(--fs-1);
@@ -382,8 +324,8 @@ h2 {
 }
 h3 {
     &.title {
-        color: var(--color-1);
-        font-size: var(--fs-1);
+        color: var(--color-2);
+        font-size: var(--fs-4);
     }
 }
 h4 {
@@ -404,21 +346,507 @@ h6 {
         font-size: var(--fs-1);
     }
 }
-
 .btn {
     &--color-1 {
         background-color: var(--color-1);
-        color: var(--color-2);
-        border-color: var(--color-1);
+        color: var(--color-10);
+        border-color: var(--color-1) !important;
         &:hover {
             background-color: var(--color-1);
-            color: var(--color-2);
+            color: var(--color-10);
             border-color: var(--color-1);
         }
         &.active {
             background-color: var(--color-1);
-            color: var(--color-2);
+            color: var(--color-10);
             border-color: var(--color-1);
         }
+    }
+    &--color-2 {
+        background-color: var(--color-5);
+        color: var(--color-2);
+        border-color: var(--color-2);
+        &:hover {
+            background-color: var(--color-5);
+            color: var(--color-2);
+            border-color: var(--color-2);
+        }
+        &.active {
+            background-color: var(--color-5);
+            color: var(--color-2);
+            border-color: var(--color-2);
+        }
+    }
+    &--color-6 {
+        background-color: var(--color-6);
+        color: var(--color-5);
+        border-color: var(--color-6);
+        &:hover {
+            background-color: var(--color-6) !important;
+            opacity: 0.8 !important;
+            color: var(--color-5) !important;
+            border-color: var(--color-6) !important;
+        }
+        &.active {
+            background-color: var(--color-5);
+            color: var(--color-2);
+            border-color: var(--color-6);
+        }
+    }
+
+    &-sm {
+        font-size: var(--fs-9) !important;
+        padding: 1.1rem 2rem !important;
+    }
+    &-lg {
+        padding: 1.1rem 2rem !important;
+    }
+    &-xl {
+        padding: 1.5rem 4rem !important;
+        font-size: var(--fs-7) !important;
+    }
+    &-img {
+        img {
+            width: 18px !important;
+            height: 8px !important;
+        }
+    }
+    &--transparent {
+        background-color: transparent !important;
+        color: var(--color-3) !important;
+        &:hover {
+            background-color: transparent !important;
+            color: var(--color-1) !important;
+            border-color: var(--color-1) !important;
+        }
+        &.active {
+            background-color: transparent !important;
+            color: var(--color-1) !important;
+            border-color: var(--color-1) !important;
+        }
+
+        &-white {
+            background-color: transparent !important;
+            border: 1px solid var(--color-5) !important;
+            color: var(--color-5) !important;
+            &.hover-bg-1:hover {
+                background-color: var(--color-1) !important;
+                color: var(--color-5) !important;
+                border-color: var(--color-1) !important;
+            }
+            &:hover {
+                background-color: transparent !important;
+                color: var(--color-5) !important;
+                border-color: var(--color-1) !important;
+            }
+        }
+        &-black {
+            background-color: transparent !important;
+            border: 1px solid var(--color-2) !important;
+            color: var(--color-2) !important;
+            &:hover {
+                background-color: transparent !important;
+                color: var(--color-1) !important;
+                border-color: var(--color-1) !important;
+            }
+            &.active {
+                background-color: transparent !important;
+                color: var(--color-1) !important;
+                border-color: var(--color-1) !important;
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+    }
+    @include media-breakpoint-down(md) {
+        &-xl {
+            font-size: var(--fs-8) !important;
+            padding: 1.5rem 2rem !important;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+    }
+    @include media-breakpoint-down(xl) {
+        &-sm {
+            font-size: 1rem !important;
+            padding: 1rem !important;
+        }
+    }
+    @include media-breakpoint-up(xxl) {
+    }
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/open-sans-v29-vietnamese-regular.eot");
+    src: url("../fonts/open-sans-v29-vietnamese-regular.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/open-sans-v29-vietnamese-regular.woff") format("woff"),
+        url("../fonts/open-sans-v29-vietnamese-regular.ttf") format("truetype"),
+        url("../fonts/open-sans-v29-vietnamese-regular.svg#OpenSans")
+            format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/open-sans-v29-vietnamese-500.eot");
+    src: url("../fonts/open-sans-v29-vietnamese-500.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/open-sans-v29-vietnamese-500.woff") format("woff"),
+        url("../fonts/open-sans-v29-vietnamese-500.ttf") format("truetype"),
+        url("../fonts/open-sans-v29-vietnamese-500.svg#OpenSans") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/open-sans-v29-vietnamese-600.eot");
+    src: url("../fonts/open-sans-v29-vietnamese-600.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/open-sans-v29-vietnamese-600.woff") format("woff"),
+        url("../fonts/open-sans-v29-vietnamese-600.ttf") format("truetype"),
+        url("../fonts/open-sans-v29-vietnamese-600.svg#OpenSans") format("svg");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/open-sans-v29-vietnamese-700.eot");
+    src: url("../fonts/open-sans-v29-vietnamese-700.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/open-sans-v29-vietnamese-700.woff") format("woff"),
+        url("../fonts/open-sans-v29-vietnamese-700.ttf") format("truetype"),
+        url("../fonts/open-sans-v29-vietnamese-700.svg#OpenSans") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "OpenSans";
+    src: url("../fonts/open-sans-v29-vietnamese-italic.eot");
+    src: url("../fonts/open-sans-v29-vietnamese-italic.eot?#iefix")
+            format("embedded-opentype"),
+        url("../fonts/open-sans-v29-vietnamese-italic.woff") format("woff"),
+        url("../fonts/open-sans-v29-vietnamese-italic.ttf") format("truetype"),
+        url("../fonts/open-sans-v29-vietnamese-italic.svg#OpenSans")
+            format("svg");
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+a {
+    color: var(--color-9);
+    text-decoration: none;
+    &:hover {
+        color: var(--color-1);
+    }
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.owl-dot:focus {
+    outline: none;
+}
+
+.owl-next:focus,
+.owl-prev:focus {
+    outline: none;
+}
+
+.owl-theme .owl-nav {
+    margin-top: 0;
+}
+
+.owl-carousel {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.subtitle {
+    font-size: var(--fs-7);
+    color: var(--color-3);
+}
+
+.label span {
+    margin-left: 2px;
+}
+
+.breadcrumb {
+    background: var(--color-5);
+    font-size: var(--fs-8);
+    padding: 1.5rem 0;
+    .breadcrumb-list {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        .breadcrumb-item {
+            color: rgba(0, 0, 0, 0.451);
+            a {
+                color: var(--color-3);
+                &:hover {
+                    color: var(--color-2);
+                }
+            }
+            &.active {
+                color: var(--color-2);
+            }
+            + .breadcrumb-item {
+                padding-left: 0.8rem;
+                &::before {
+                    padding-right: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+@-webkit-keyframes stuckMoveDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes stuckMoveDown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.owl-carousel {
+    .owl-nav button {
+        &.owl-prev {
+            background: transparent;
+            border: 0;
+            left: 0;
+            transition: all 0.5s;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &:hover {
+                background-color: transparent;
+                color: #333;
+            }
+
+            i {
+                background: #fafafa;
+                border: none !important;
+                width: 3rem;
+                height: 3rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: var(--rounded-circle);
+            }
+        }
+
+        &.owl-next {
+            background: transparent;
+            border: 0;
+            right: 0;
+            transition: all 0.5s;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            &:hover {
+                background-color: transparent;
+                color: #333;
+            }
+
+            i {
+                background: #fafafa;
+                border: none !important;
+                width: 3rem;
+                height: 3rem;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: var(--rounded-circle);
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        left: 50%;
+        bottom: 1.2rem;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        .owl-dot {
+            &.active span {
+                width: 14px !important;
+                height: 14px !important;
+                background: var(--color-5) !important;
+            }
+
+            span {
+                width: 9px !important;
+                height: 9px !important;
+                margin: 0px 2.5px !important;
+                border: 1px solid var(--color-5) !important;
+                background: transparent !important;
+                transition: all 0.3s ease;
+            }
+        }
+    }
+}
+
+//
+.box-product__image:hover + .box-product-tooltip {
+    top: 0;
+}
+
+.box-product-color__item {
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+    &.is-select {
+        width: 2.2rem;
+        height: 2.2rem;
+        &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border-radius: var(--rounded-circle);
+            border: 3px solid var(--color-5);
+        }
+    }
+}
+
+.box-product-color__item--black {
+    background-color: #000;
+}
+
+.box-product-color__item--brown {
+    background-color: #6c533d;
+}
+
+.box-product-color__item--blue {
+    background-color: #89d2b3;
+}
+
+.box-product-color__item--red {
+    background-color: #cb1515;
+}
+
+.box-product-color__item--white {
+    background-color: #fff;
+}
+
+.box-product-color__item--yellow {
+    background-color: #cf9114;
+}
+
+.box-product-color__item--green {
+    background-color: #006e5b;
+}
+
+.box-product-color__item--skin {
+    background-color: #e3c5a5;
+}
+
+.box-product-color__item--gray {
+    background-color: #a4a09d;
+}
+
+.box-product-color__item--reddish {
+    background-color: #9e635e;
+}
+
+.box-product-tooltip {
+    top: 100%;
+    z-index: 3;
+    transition: all 0.4s ease;
+    border-radius: 1rem;
+}
+
+.box-product-tooltip.toggle {
+    top: 0;
+}
+
+.box-product {
+    transition: all 0.3s;
+    &:hover .box-product-tooltip {
+        transition: all 0.3s;
+    }
+    .table.product-atrribute {
+        tr,
+        td {
+            padding: 0.2rem 0.2rem;
+            border: 0;
+        }
+    }
+}
+
+.box-product {
+    &.hover-shadow {
+        &:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    }
+    &:hover .box-product__image--hover {
+        display: flex !important;
+        transform: 0.4s;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+// nav-tabs-product-style
+.nav-tabs-product {
+    border: none;
+    .nav-item {
+        .nav-link {
+            border: none;
+            &.active {
+                border-bottom: 2px solid var(--color-1);
+                color: var(--color-1);
+            }
+        }
+    }
+}
+
+.start {
+    &-25 {
+        left: 25%;
+    }
+    &-75 {
+        left: 75%;
+    }
+}
+.w {
+    &-45 {
+        width: 45%;
+    }
+    &-65 {
+        width: 65%;
     }
 }

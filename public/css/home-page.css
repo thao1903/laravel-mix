@@ -1,3 +1,20 @@
-.home-page h1 {
-  color: var(--primaryColor);
+.home-page .customer-review {
+  background: url(/images/report-bg.png?ee90f115d7ec5ac8c52d79af1ba37e19);
+  background-size: cover;
+}
+.home-page .customer-review-title {
+  z-index: 1;
+}
+.home-page .customer-review .review-item__content p {
+  max-width: 800px;
+}
+.home-page .customer-review:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
 }
